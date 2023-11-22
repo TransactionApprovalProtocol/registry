@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/Agent.json",
+  "title": "Agent",
+  "description": "A transaction agent",
+  "type": "object",
+  "required": ["@id", "policies"],
+  "properties": {
+    "@id": {
+      "$ref": "https://tap.rspv/schemas/DID.json"
+    },
+    "policies": {
+      "description": "An array of policies",
+      "type": "array"
+    }
+  }
+}

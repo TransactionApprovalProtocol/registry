@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/DepositRequest.json",
+  "title": "DepositRequest",
+  "description": "A deposit request",
+  "type": "object",
+  "required": [
+    "transactionId",
+    "amount",
+    "asset",
+    "originators",
+    "beneficiaries",
+    "agents",
+    "settlementInfo"
+  ],
+  "properties": {
+    "transactionId": {
+      "description": "An identitifer for the transaction",
+      "type": "string"
+    },
+    "amount": {
+      "description": "Amount for the transaction",
+      "type": "string",
+      "pattern": "[0-9]+"
+    },
+    "asset": {
+      "$ref": "https://tap.rspv/schemas/Caip19.json"
+    },
+    "originators": {
+      "description": "An ordered array of originator DIDs",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["@id"],
+        "properties": {
+          "@id": {
+            "$ref": "https://tap.rspv/schemas/DID.json"
+          }
+        }
+      }
+    },
+    "beneficiaries": {
+      "description": "An ordered array of beneficiary DIDs",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["@id"],
+        "properties": {
+          "@id": {
+            "$ref": "https://tap.rspv/schemas/DID.json"
+          }
+        }
+      }
+    },
+    "agents": {
+      "description": "An ordered array of participant agents in a transaction",
+      "type": "array",
+      "items": {
+        "$ref": "https://tap.rspv/schemas/Agent.json"
+      }
+    },
+    "settlementInfo": {
+      "$ref": "https://tap.rspv/schemas/SettlementInfo.json"
+    }
+  }
+}

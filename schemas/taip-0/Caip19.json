@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/Caip19.json",
+  "title": "CAIP19",
+  "description": "A CAIP 19 asset representation. See: https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-19.md",
+  "type": "string",
+  "pattern": "^[-a-z0-9]{3,8}:[-_a-zA-Z0-9]{1,32}/[-a-z0-9]{3,8}:[-.%a-zA-Z0-9]{1,128}(/[-.%a-zA-Z0-9]{1,78})?$",
+  "examples": [
+    "eip155:1/slip44:60",
+    "bip122:000000000019d6689c085ae165831e93/slip44:0"
+  ]
+}

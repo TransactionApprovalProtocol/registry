@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/AddAgent.json",
+  "title": "AddAgent",
+  "description": "Represents the request of an agent to add an agent",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "transactionId": {
+      "description": "An identitifer for the transaction",
+      "type": "string"
+    },
+    "agent": {
+      "$ref": "https://tap.rspv/schemas/Agent.json"
+    }
+  }
+}

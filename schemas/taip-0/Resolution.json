@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/Resolution.json",
+  "title": "Resolution",
+  "description": "A resolution of a transaction by an agent",
+  "type": "object",
+  "required": ["did", "resolution"],
+  "properties": {
+    "did": {
+      "$ref": "https://tap.rspv/schemas/DID.json"
+    },
+    "resolution": {
+      "description": "Resolution for the transaction",
+      "type": "string",
+      "enum": ["APPROVE", "REJECT", "NON_APPLICABLE"]
+    }
+  }
+}

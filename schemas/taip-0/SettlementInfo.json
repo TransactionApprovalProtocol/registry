@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/SettlementInfo.json",
+  "title": "Settlement Info",
+  "description": "Transaction settlement information",
+  "type": "object",
+  "properties": {
+    "originatorAddress": {
+      "description": "The crypto address of the originator",
+      "type": "string"
+    },
+    "beneficiaryAddress": {
+      "description": "The crypto address of the beneficiary",
+      "type": "string"
+    },
+    "txHash": {
+      "description": "The transaction hash",
+      "type": "string"
+    }
+  }
+}
