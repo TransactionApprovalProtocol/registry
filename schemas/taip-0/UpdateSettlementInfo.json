@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tap.rspv/schemas/UpdateResolution.json",
+  "title": "UpdateResolution",
+  "description": "Represents the request of an agent to signal the approval or rejection of a transaction",
+  "type": "object",
+  "required": ["transactionId", "resolution"],
+  "properties": {
+    "transactionId": {
+      "description": "An identitifer for the transaction",
+      "type": "string"
+    },
+    "settlementInfo": {
+      "$ref": "https://tap.rspv/schemas/SettlementInfo.json"
+    }
+  }
+}
