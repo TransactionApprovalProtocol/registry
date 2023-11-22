@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://tap.rspv/schemas/SettlementInfoProof.json",
-  "title": "Settlement Info Proof",
-  "description": "The originator requests proof of control of the destination account",
-  "type": "object",
-  "properties": {}
-}

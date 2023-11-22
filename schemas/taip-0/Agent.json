@@ -11,12 +11,7 @@
     },
     "policies": {
       "description": "An array of policies",
-      "type": "array",
-      "items": {
-        "anyOf": [
-          { "$ref": "https://tap.rspv/schemas/SettlementInfoProof.json" }
-        ]
-      }
+      "type": "array"
     }
   }
 }
